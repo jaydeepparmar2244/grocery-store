@@ -1,0 +1,29 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">GroceryStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/products">Products</a>
+        <% if(currentUser && currentUser.username=='admin' ) { %>
+          <a class="nav-item nav-link" href="/products/new"><i class="bi bi-plus-circle"></i> Add Product</a>
+          <% } %>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <% if(!currentUser){ %>
+          <a class="nav-link" href="/login"><i class="bi bi-box-arrow-in-left"></i> Login</a>
+          <a class="nav-link" href="/register"><i class="bi bi-person-plus-fill"></i> Register</a>
+          <% }else{ %>
+            <button class="snipcart-checkout btn btn-dark nav-link"><i class="bi bi-cart"></i> <span class="snipcart-total-price"></span>(<span class="snipcart-items-count"></span>)</button>
+            <a class="nav-link mx-2" href="/profile"><i class="bi bi-person-circle"></i>
+              <%= currentUser.username %>
+            </a>
+            <a class="nav-link" href="/logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

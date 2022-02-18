@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplate')%>
+   <div class="row">
+    <h1 class="text-center">Add a New Product</h1>
+       <div class="col-6 offset-3">
+        <form action="/products" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="name" class="form-label">Prouct Name :</label>
+                <input type="text" name="product[name]" id="name" class="form-control" placeholder="Enter Product Name" required>
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="brand" class="form-label">Brand Name :</label>
+                <input type="text" id="brand" name="product[brand]" class="form-control" placeholder="Enter Brand Name" required>
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Add Category :</label>
+                <input type="text" id="category" name="product[category]" class="form-control" placeholder="Add Category Of Product" required>
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Enter Price :</label>
+                <input type="number" id="price" name="product[price]"  class="form-control" placeholder="Enter Price Of Product" required>
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="amount" class="form-label">Enter Amount :</label>
+                <input type="text" id="amount"  name="product[amount]" class="form-control" placeholder="Enter Amount Of Product" required>
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">Choose image(s)...</span>
+                        <!-- <span class="form-file-button">Browse</span> -->
+                    </label>
+                    <input type="file" class="form-file-input form-control" id="image" name="image" multiple>
+                </div>
+            </div>
+            <!-- <div class="mb-3">
+                <label for="image" class="form-label">Image:</label>
+                <input type="file" name="image" id="image" class="form-control" multiple>
+            </div> -->
+            <div class="mb-3">
+                <button class="btn btn-success">ADD</button>
+            </div>
+            
+        </form>
+       </div>
+   </div>
+    
+    

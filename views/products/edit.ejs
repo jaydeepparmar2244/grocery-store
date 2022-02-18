@@ -1,0 +1,68 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">Edit This Product</h1>
+    <div class="col-6 offset-3">
+        <form action="/products/<%=product._id%>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="name">Prouct Name :</label>
+                <input type="text" name="product[name]" class="form-control" id="name" placeholder="Enter Product Name" value="<%= product.name%>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+            <label for="brand" class="form-label">Brand Name :</label>
+            <input type="text" name="product[brand]" class="form-control" id="brand" placeholder="Enter Brand Name" value="<%= product.brand%>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            </div>
+            <div class="mb-3">
+            <label for="category" class="form-label">Add Category :</label>
+            <input type="text" name="product[category]" class="form-control" id="category" placeholder="Add Category Of Product" value="<%= product.category%>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            </div>
+            <div class="mb-3">
+            <label for="price" class="form-label">Enter Price :</label>
+            <input type="number" name="product[price]" class="form-control" id="price" placeholder="Enter Price Of Product" value="<%= product.price %>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            </div>
+            <div class="mb-3">
+            <label for="amount" class="form-label">Enter Amount :</label>
+            <input type="text" name="product[amount]" class="form-control" id="amount" placeholder="Enter Amount Of Product" value="<%= product.amount%>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <label class="form-file-label form-label" for="image">
+                        <span class="form-file-text custom-file-label">Add more image(s)...</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                    <input type="file" class="form-file-input form-control" id="image" name="image" multiple>
+                </div>
+            </div>
+            <div class="mb-3">
+                <% product.images.forEach(function(img, i) {  %>
+
+                <img src="<%=img.thumbnail %>" class="img-thumbnail" alt="">
+                <div class="form-check-inline">
+                    <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                </div>
+                <label for="image-<%=i%>">Delete?</label>
+                <% })%>
+            </div>
+            <div class="mb-3">
+            <button class="btn btn-primary">ADD</button>
+            </div>
+        </form>
+    </div>
+</div>
+    
+    
+    <a href="/products/<%=product._id%>">Cancel</a>
