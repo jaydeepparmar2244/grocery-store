@@ -5,6 +5,7 @@ const catchAsync = require('../utils/catchAsync');
 // const ExpressError = require('../utils/ExpressError');
 const passport = require('passport');
 const users = require('../controllers/users');
+const products = require('../controllers/products')
 
 router.route('/register')
     .get(users.registerForm)
@@ -17,5 +18,7 @@ router.route('/login')
 router.get('/logout',users.logout);
 
 router.get('/profile',users.showProfile);
+
+router.get('/',products.index)
 
 module.exports = router;
