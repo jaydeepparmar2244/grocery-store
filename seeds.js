@@ -30,60 +30,60 @@ mongoose.connect('mongodb://localhost:27017/store', {useNewUrlParser: true, useU
 
 const seedProducts = [
     {
-        name:'Buttermilk',
-        brand:'Amul',
-        price:10,
-        category:'Dairy',
-        amount:'200 gram',
+        name:'Apple',
+        brand:'Kashmiri',
+        price:100,
+        category:'Fruit',
+        amount:'500 Gram',
         images:[
             {
-                url: "https://res.cloudinary.com/dgm2ycrlq/image/upload/v1625386638/Yelpcamp/vsxjpnjvumky9miqhjkr.jpg", 
+                url: "https://res.cloudinary.com/dgm2ycrlq/image/upload/v1634054299/Groceries/fewwefeq110wdayo2vc6.jpg", 
                 filename: "Yelpcamp/vsxjpnjvumky9miqhjkr" 
             }
         ],
-        author:'60d457f099e67539b0c2ea3c'
+        author:'6213391249f3376740a7c64d'
     },
     {
-        name:'Apples',
-        brand:'Local',
-        price:100,
-        category:'Fruit',
+        name:'FaceWash',
+        brand:'Himalaya',
+        price:120,
+        category:'Health Care',
         amount:'250 gram',
         images:[
             {
-            url: "https://res.cloudinary.com/dgm2ycrlq/image/upload/v1625386638/Yelpcamp/vsxjpnjvumky9miqhjkr.jpg", 
+            url: "https://res.cloudinary.com/dgm2ycrlq/image/upload/v1633868280/Groceries/ma0z7grw4p04n8hcb6mo.webp", 
             filename: "Yelpcamp/vsxjpnjvumky9miqhjkr" 
         }
         ],
-        author:'60d457f099e67539b0c2ea3c'
+        author:'6213391249f3376740a7c64d'
     },
     {
-        name:'Carrot',
+        name:'Tomato',
         brand:'Local',
-        price:20,
+        price:40,
         category:'Vegetable',
-        amount:'50 gram',
+        amount:'250 gram',
         images:[
             {
-                url: "https://res.cloudinary.com/dgm2ycrlq/image/upload/v1625386638/Yelpcamp/vsxjpnjvumky9miqhjkr.jpg", 
+                url: "https://res.cloudinary.com/dgm2ycrlq/image/upload/v1633868279/Groceries/bm8wjmauqetektpumk9o.jpg", 
                 filename: "Yelpcamp/vsxjpnjvumky9miqhjkr" 
             }
         ],
-        author:'60d457f099e67539b0c2ea3c'
+        author:'6213391249f3376740a7c64d'
     },
     {
-        name:'Waffers',
-        brand:'Real',
-        price:10,
+        name:'Noodles',
+        brand:'Maggy',
+        price:12,
         category:'Snack',
         amount:'20 gram',
         images:[
             {
-                url: "https://res.cloudinary.com/dgm2ycrlq/image/upload/v1625386638/Yelpcamp/vsxjpnjvumky9miqhjkr.jpg", 
+                url: "https://res.cloudinary.com/dgm2ycrlq/image/upload/v1633867519/Groceries/m86v4o0n3arzgh2sh8ls.jpg", 
                 filename: "Yelpcamp/vsxjpnjvumky9miqhjkr" 
             }
         ],
-        author:'60d457f099e67539b0c2ea3c'
+        author:'6213391249f3376740a7c64d'
     }
 ]
 
